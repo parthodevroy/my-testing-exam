@@ -1,6 +1,6 @@
-// src/App.jsx
+
 import React, { useState } from "react";
-import "./App.css"; // Tailwind should be configured in this file/project
+import "./App.css";
 import { MdAddModerator, MdLiveTv, MdRemoveRedEye } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 import {
@@ -107,7 +107,7 @@ export default function App() {
       </nav>
 
       <div className="flex flex-1 relative">
-        {/* SIDEBAR */}
+       
        <div className="pt-6 pl-8">
          <aside
           className={`
@@ -136,20 +136,20 @@ export default function App() {
             ))}
           </nav>
 
-          {/* collapse button for mobile */}
+          
           <div className="md:hidden mt-4">
             <button onClick={() => setOpen(false)} className="px-3 py-2 bg-[#BCC5D7BF] rounded w-full">Close</button>
           </div>
         </aside>
        </div>
 
-        {/* overlay for mobile when sidebar open */}
+       
         {open && <div onClick={() => setOpen(false)} className="fixed inset-0 bg-black/30 md:hidden z-30"></div>}
 
-        {/* MAIN */}
+        
         <main className="flex-1 p-4 md:p-6 lg:p-8">
          <div className="bg-[#BCC5D7BF] p-4">
-           {/* Header + Export */}
+          
          <div className="flex justify-between">
            <div className="mb-6">
             <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Dashboard</h1>
@@ -160,7 +160,7 @@ export default function App() {
           </button>
          </div>
 
-          {/* Stats cards */}
+          
           <section className="mb-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {statsData.map((s) => {
@@ -182,7 +182,7 @@ export default function App() {
           </section>
 
          </div>
-          {/* Search + Actions */}
+          
           <section className="mb-6 mt-2">
             <div className="flex flex-col justify-between sm:flex-row gap-3 text-black items-center">
               <input
@@ -199,7 +199,7 @@ export default function App() {
             </div>
           </section>
 
-          {/* Table for md+ screens */}
+         
           <section className="mb-8">
             <div className="hidden md:block rounded-xl bg-white shadow overflow-x-auto">
               <table className="w-full min-w-[900px] text-left">
@@ -235,7 +235,7 @@ export default function App() {
               </table>
             </div>
 
-            {/* Card list for small screens */}
+            
             <div className="md:hidden space-y-3">
               {rows.map((r, i) => (
                 <div key={i} className="bg-[#BCC5D7BF] rounded-xl p-4 shadow flex flex-col gap-3">
