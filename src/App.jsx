@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import { MdRemoveRedEye } from "react-icons/md";
 
 export default function App() {
   return (
@@ -87,7 +88,7 @@ export default function App() {
                   <td className="p-3">100K</td>
                   <td className="p-3">Bangladesh</td>
                   <td className="p-3"><span className="px-2 py-1 bg-green-200 text-green-700 rounded">active</span></td>
-                  <td className="p-3 cursor-pointer">👁️</td>
+                  <td className="p-3 cursor-pointer"><MdRemoveRedEye /></td>
                 </tr>
               ))}
             </tbody>
